@@ -4,10 +4,6 @@ class QuotesController < ApplicationController
     #@quotes = Quote.all
   end
 
-  def new
-    @quote = Quote.new
-  end
-
   def create
     Quote.create(quote_params)
     if @quote.invalid?
